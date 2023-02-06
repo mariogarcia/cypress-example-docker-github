@@ -6,9 +6,9 @@ on:
 jobs:
   container-test-job:
     runs-on: ubuntu-latest
-    # container:
-    #   image: cypress/browsers:chrome67
-    #   options: --cpus 1
+    container:
+      image: cypress/browsers:chrome67
+      options: --cpus 1
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
