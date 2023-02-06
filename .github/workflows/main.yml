@@ -23,5 +23,4 @@ jobs:
         with:
           name: cypress-errors
           path: |
-            cypress/screenshots
-            cypress/videos
+            cypress/**
