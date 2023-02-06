@@ -15,7 +15,9 @@ jobs:
       - name: executing cypress tests
         run: |
           npm ci && \
-          $(npm bin)/cypress run --browser chrome
+          $(npm bin)/cypress run --browser chrome && \
+          ls -l && \
+          pwd
       - name: Archive production artifacts
         uses: actions/upload-artifact@v3
         with:
