@@ -1,0 +1,27 @@
+name: CI
+on:
+  push:
+    branches:
+      - master
+jobs:
+  container-test-job:
+    runs-on: ubuntu-latest
+    container:
+      image: cypress/browsers:chrome67
+      volumes:
+        - .:/home/node
+      options: --cpus 1
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      - name: executing cypress tests
+        run: |
+          npm ci && \
+          $(npm bin)/cypress run --browser chrome
+      - name: Archive production artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: cypress-errors
+          path: |
+            cypress/screenshots
+            cypress/videos
