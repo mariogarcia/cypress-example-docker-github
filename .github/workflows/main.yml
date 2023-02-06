@@ -8,8 +8,6 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: cypress/browsers:chrome67
-      volumes:
-        - .:/home/node
       options: --cpus 1
     steps:
       - name: Checkout repository
