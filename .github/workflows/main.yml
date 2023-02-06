@@ -22,5 +22,5 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: cypress-errors
-          path: |
-            cypress/**
+          path: cypress/screenshots
+          retention-days: 2
