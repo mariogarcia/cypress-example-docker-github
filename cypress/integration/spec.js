@@ -5,6 +5,6 @@ describe('page', () => {
   })
 
   it('has h2', () => {
-    cy.contains('h4', 'test')
+    cy.contains('h2', 'test')
   })
 })
