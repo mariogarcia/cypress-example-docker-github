@@ -16,7 +16,7 @@ jobs:
         uses: cypress-io/github-action@v5.0.8
         with:
           browser: chrome
-          build: npm install
+          install-command: npm install
       # - name: executing cypress tests
       #   run: |
       #     npm ci && \
