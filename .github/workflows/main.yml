@@ -12,15 +12,11 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
-      - name: Cypress run
-        uses: cypress-io/github-action@v5.0.8
-        with:
-          browser: chrome
-          install-command: npm install
-      # - name: executing cypress tests
-      #   run: |
-      #     npm ci && \
-      #     $(npm bin)/cypress run --browser chrome
+      - name: executing cypress tests
+        run: |
+          npm install && \
+          npm ci && \
+          $(npm bin)/cypress run --browser chrome
       - name: Archive production artifacts
         uses: actions/upload-artifact@v3
         with:
