@@ -16,11 +16,11 @@ jobs:
         uses: cypress-io/github-action@v5.0.8
         with:
           browser: chrome
-      - name: executing cypress tests
-        run: |
-          npm install && \
-          npm ci && \
-          $(npm bin)/cypress run --browser chrome
+          build: npm install
+      # - name: executing cypress tests
+      #   run: |
+      #     npm ci && \
+      #     $(npm bin)/cypress run --browser chrome
       - name: Archive production artifacts
         uses: actions/upload-artifact@v3
         with:
