@@ -23,6 +23,9 @@
     "url": "https://gitlab.com/cypress-io/cypress-example-docker-gitlab/issues"
   },
   "homepage": "https://gitlab.com/cypress-io/cypress-example-docker-gitlab#README",
+  "dependencies": {
+    "react": "18.2.0"
+  },
   "devDependencies": {
     "cypress": "3.2.0"
   }
