@@ -7,7 +7,7 @@ jobs:
   container-test-job:
     runs-on: ubuntu-latest
     container:
-      image: cypress/browsers:node16.17.0-chrome106
+      image: cypress/browsers:node-16.18.1-chrome-109.0.5414.74-1-ff-109.0-edge-109.0.1518.52-1
       options: --cpus 1
     steps:
       - name: Checkout repository
