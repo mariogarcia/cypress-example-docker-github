@@ -9,8 +9,6 @@ jobs:
     container:
       image: cypress/browsers:node18.12.0-chrome107
       options: --cpus 1
-      volumes:
-        - $(pwd):/
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
