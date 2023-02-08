@@ -14,8 +14,7 @@ jobs:
         uses: actions/checkout@v3
       - name: executing cypress tests
         run: |
-          npm install && \
-          npm ci && \
+          yarn install && \
           $(npm bin)/cypress run --browser chrome
       - name: Archive production artifacts
         uses: actions/upload-artifact@v3
